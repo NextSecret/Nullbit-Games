@@ -2,134 +2,167 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nullbit Games</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+
+  <!-- Google Fonts for Handwriting Style -->
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #111;
-      color: #fff;
-      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
     }
+
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background: #222;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
+      justify-content: space-between;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
+
     .logo {
-      font-size: 1.5rem;
+      font-size: 24px;
       font-weight: bold;
     }
-    nav a {
-      margin: 0 1rem;
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
       text-decoration: none;
-      color: #aaa;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .section {
-      padding: 6rem 2rem 3rem;
-      min-height: 100vh;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .highlight {
-      font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 1rem;
-      color: #f39c12;
+      padding: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+      color: black;
     }
-    .card {
-      background: #333;
-      margin-top: 1rem;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
+
+    nav ul li a:hover {
+      border-color: black;
     }
-    .card:hover {
-      transform: scale(1.03);
+
+    .discord-icon a {
+      font-size: 22px;
+      color: #5865F2;
     }
-    footer {
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .news-card, .info-card {
+      background: white;
+      padding: 20px;
+      border: 2px solid black;
+      width: 45%;
+      min-height: 200px;
+      position: relative;
+    }
+
+    .news-card h2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .home-title {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .welcome-text {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .image-boxes {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .image-boxes div {
+      width: 60px;
+      height: 60px;
+      background: #ddd;
+      border: 1px solid #aaa;
+    }
+
+    .mascot-placeholder {
+      margin-top: 40px;
+      font-size: 24px;
       text-align: center;
-      padding: 2rem;
-      background: #222;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">Nullbit Games</div>
+    <div class="logo">⭕ LOGO</div>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#info">Info</a>
-      <a href="#games">Games</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="discord-icon">
+          <a href="https://discord.com/invite/YOUR-SERVER-ID" target="_blank" title="Join us on Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  <section id="home" class="section">
-    <div class="highlight">HOME</div>
-    <p>Welcome to Nullbit Games, a place where indie magic meets creative passion.</p>
-    <div class="card">
-      <p><strong>News!!</strong><br>Big update launching soon – stay tuned!</p>
+  <main>
+    <div class="news-card">
+      <h2>NEWS!!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
-  </section>
 
-  <section id="info" class="section">
-    <div class="highlight">ABOUT US</div>
-    <p>We are Nullbit Games, a game development group creating unique experiences for players everywhere.</p>
-    <div class="card">
-      <p>Our team consists of artists, coders, dreamers – all working together on meaningful projects.</p>
+    <div class="info-card">
+      <div class="home-title">HOME</div>
+      <div class="welcome-text">Welcome,</div>
+      <p>Lorem ipsum dolor sit amet.</p>
     </div>
-  </section>
 
-  <section id="games" class="section">
-    <div class="highlight">OUR GAMES</div>
-    <div class="card">
-      <p>🎮 Game Title One</p>
-      <p>A short description of the game and what makes it exciting.</p>
+    <div class="info-card">
+      <p>Some info and team images below:</p>
+      <div class="image-boxes">
+        <div></div>
+        <div></div>
+      </div>
     </div>
-    <div class="card">
-      <p>🎮 Game Title Two</p>
-      <p>Another cool project with stylish mechanics and addictive gameplay.</p>
+
+    <div class="mascot-placeholder">
+      🧍 Mascot Placeholder
     </div>
-  </section>
+  </main>
 
-  <footer>
-    &copy; 2025 Nullbit Games — All rights reserved.
-  </footer>
-
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
 </body>
 </html>
