@@ -1,7 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nullbit Games | Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="page-transition"></div>
+  
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <span class="logo-text">Nullbit<span class="accent">Games</span></span>
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="info.html">About</a></li>
+          <li><a href="games.html">Games</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-background">
+        <div class="particles" id="particles"></div>
+      </div>
+      <div class="container">
+        <h1 class="fade-in">Craft. Play. <span class="accent">Innovate.</span></h1>
+        <p class="subtitle fade-in delay-1">We create gaming experiences that push boundaries and captivate players.</p>
+        <div class="cta-buttons fade-in delay-2">
+          <a href="games.html" class="btn btn-primary">Explore Games</a>
+          <a href="info.html" class="btn btn-secondary">About Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-games">
+      <div class="container">
+        <h2 class="section-title">Featured Games</h2>
+        <div class="games-grid">
+          <div class="game-card">
+            <div class="game-image">
+              <img src="https://images.pexels.com/photos/7915482/pexels-photo-7915482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cosmic Voyager">
+            </div>
+            <div class="game-info">
+              <h3>Cosmic Voyager</h3>
+              <p>An interstellar adventure through unexplored galaxies.</p>
+              <a href="games.html#cosmic-voyager" class="btn btn-small">Learn More</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-image">
+              <img src="https://images.pexels.com/photos/4328961/pexels-photo-4328961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Neon Dash">
+            </div>
+            <div class="game-info">
+              <h3>Neon Dash</h3>
+              <p>Race through a cyberpunk city at breakneck speeds.</p>
+              <a href="games.html#neon-dash" class="btn btn-small">Learn More</a>
+            </div>
+          </div>
+          <div class="game-card">
+            <div class="game-image">
+              <img src="https://images.pexels.com/photos/7923910/pexels-photo-7923910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pixel Kingdom">
+            </div>
+            <div class="game-info">
+              <h3>Pixel Kingdom</h3>
+              <p>Build, defend, and expand your medieval empire.</p>
+              <a href="games.html#pixel-kingdom" class="btn btn-small">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-preview">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>Nullbit Games is an independent game development studio passionate about creating immersive, innovative gaming experiences that challenge conventions and captivate players worldwide.</p>
+            <p>Founded by a team of industry veterans and talented newcomers, we combine technical expertise with creative vision to craft games that stand out in today's crowded market.</p>
+            <a href="info.html" class="btn btn-tertiary">Our Story</a>
+          </div>
+          <div class="about-image">
+            <img src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Nullbit Games Team">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container">
+        <h2>Stay in the Loop</h2>
+        <p>Subscribe for updates on new releases, behind-the-scenes content, and exclusive offers.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <span class="logo-text">Nullbit<span class="accent">Games</span></span>
+          <p>Crafting exceptional gaming experiences since 2023.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">About</a></li>
+            <li><a href="games.html">Games</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Discord</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Nullbit Games. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/transitions.js"></script>
 </body>
 </html>
