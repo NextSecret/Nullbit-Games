@@ -1,163 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nullbit Games | Home</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nullbit Games</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #222;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #aaa;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .section {
+      padding: 6rem 2rem 3rem;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .highlight {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #f39c12;
+    }
+    .card {
+      background: #333;
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+    }
+  </style>
 </head>
 <body>
-  <div class="page-transition"></div>
-  
   <header>
-    <div class="container">
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <span class="logo-text">Nullbit<span class="accent">Games</span></span>
-        </a>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="info.html">About</a></li>
-          <li><a href="games.html">Games</a></li>
-        </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        </button>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </div>
+    <div class="logo">Nullbit Games</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#info">Info</a>
+      <a href="#games">Games</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-background">
-        <div class="particles" id="particles"></div>
-      </div>
-      <div class="container">
-        <h1 class="fade-in">Craft. Play. <span class="accent">Innovate.</span></h1>
-        <p class="subtitle fade-in delay-1">We create gaming experiences that push boundaries and captivate players.</p>
-        <div class="cta-buttons fade-in delay-2">
-          <a href="games.html" class="btn btn-primary">Explore Games</a>
-          <a href="info.html" class="btn btn-secondary">About Us</a>
-        </div>
-      </div>
-    </section>
+  <section id="home" class="section">
+    <div class="highlight">HOME</div>
+    <p>Welcome to Nullbit Games, a place where indie magic meets creative passion.</p>
+    <div class="card">
+      <p><strong>News!!</strong><br>Big update launching soon – stay tuned!</p>
+    </div>
+  </section>
 
-    <section class="featured-games">
-      <div class="container">
-        <h2 class="section-title">Featured Games</h2>
-        <div class="games-grid">
-          <div class="game-card">
-            <div class="game-image">
-              <img src="https://images.pexels.com/photos/7915482/pexels-photo-7915482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cosmic Voyager">
-            </div>
-            <div class="game-info">
-              <h3>Cosmic Voyager</h3>
-              <p>An interstellar adventure through unexplored galaxies.</p>
-              <a href="games.html#cosmic-voyager" class="btn btn-small">Learn More</a>
-            </div>
-          </div>
-          <div class="game-card">
-            <div class="game-image">
-              <img src="https://images.pexels.com/photos/4328961/pexels-photo-4328961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Neon Dash">
-            </div>
-            <div class="game-info">
-              <h3>Neon Dash</h3>
-              <p>Race through a cyberpunk city at breakneck speeds.</p>
-              <a href="games.html#neon-dash" class="btn btn-small">Learn More</a>
-            </div>
-          </div>
-          <div class="game-card">
-            <div class="game-image">
-              <img src="https://images.pexels.com/photos/7923910/pexels-photo-7923910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pixel Kingdom">
-            </div>
-            <div class="game-info">
-              <h3>Pixel Kingdom</h3>
-              <p>Build, defend, and expand your medieval empire.</p>
-              <a href="games.html#pixel-kingdom" class="btn btn-small">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="info" class="section">
+    <div class="highlight">ABOUT US</div>
+    <p>We are Nullbit Games, a game development group creating unique experiences for players everywhere.</p>
+    <div class="card">
+      <p>Our team consists of artists, coders, dreamers – all working together on meaningful projects.</p>
+    </div>
+  </section>
 
-    <section class="about-preview">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2>Who We Are</h2>
-            <p>Nullbit Games is an independent game development studio passionate about creating immersive, innovative gaming experiences that challenge conventions and captivate players worldwide.</p>
-            <p>Founded by a team of industry veterans and talented newcomers, we combine technical expertise with creative vision to craft games that stand out in today's crowded market.</p>
-            <a href="info.html" class="btn btn-tertiary">Our Story</a>
-          </div>
-          <div class="about-image">
-            <img src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Nullbit Games Team">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="newsletter">
-      <div class="container">
-        <h2>Stay in the Loop</h2>
-        <p>Subscribe for updates on new releases, behind-the-scenes content, and exclusive offers.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <section id="games" class="section">
+    <div class="highlight">OUR GAMES</div>
+    <div class="card">
+      <p>🎮 Game Title One</p>
+      <p>A short description of the game and what makes it exciting.</p>
+    </div>
+    <div class="card">
+      <p>🎮 Game Title Two</p>
+      <p>Another cool project with stylish mechanics and addictive gameplay.</p>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-logo">
-          <span class="logo-text">Nullbit<span class="accent">Games</span></span>
-          <p>Crafting exceptional gaming experiences since 2023.</p>
-        </div>
-        <div class="footer-links">
-          <h3>Navigation</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="info.html">About</a></li>
-            <li><a href="games.html">Games</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h3>Connect</h3>
-          <ul>
-            <li><a href="#" target="_blank" rel="noopener">Twitter</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Discord</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h3>Legal</h3>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2023 Nullbit Games. All rights reserved.</p>
-      </div>
-    </div>
+    &copy; 2025 Nullbit Games — All rights reserved.
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/transitions.js"></script>
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
