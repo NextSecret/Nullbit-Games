@@ -1,168 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
-
-  <!-- Google Fonts for Handwriting Style -->
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      padding: 20px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 2px solid black;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav ul li {
-      display: inline;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      font-weight: bold;
-      padding: 5px;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s;
-      color: black;
-    }
-
-    nav ul li a:hover {
-      border-color: black;
-    }
-
-    .discord-icon a {
-      font-size: 22px;
-      color: #5865F2;
-    }
-
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-
-    .news-card, .info-card {
-      background: white;
-      padding: 20px;
-      border: 2px solid black;
-      width: 45%;
-      min-height: 200px;
-      position: relative;
-    }
-
-    .news-card h2 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .home-title {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-
-    .welcome-text {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .image-boxes {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .image-boxes div {
-      width: 60px;
-      height: 60px;
-      background: #ddd;
-      border: 1px solid #aaa;
-    }
-
-    .mascot-placeholder {
-      margin-top: 40px;
-      font-size: 24px;
-      text-align: center;
-      opacity: 0.6;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nullbit Games</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="logo">⭕ LOGO</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="discord-icon">
-          <a href="https://discord.com/invite/YOUR-SERVER-ID" target="_blank" title="Join us on Discord">
-            <i class="fab fa-discord"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="news-card">
-      <h2>NEWS!!</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-
-    <div class="info-card">
-      <div class="home-title">HOME</div>
-      <div class="welcome-text">Welcome,</div>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-
-    <div class="info-card">
-      <p>Some info and team images below:</p>
-      <div class="image-boxes">
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-
-    <div class="mascot-placeholder">
-      🧍 Mascot Placeholder
-    </div>
-  </main>
-
+  <nav>
+    <div class="logo">Nullbit <span>Games</span></div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="games.html">Games</a></li>
+    </ul>
+  </nav>
+  <section class="hero">
+    <h1>Welcome to <span>Nullbit Games</span>!</h1>
+    <p>We make games that are as fun as they are silly. Professional? Sometimes. Cool? Always.</p>
+    <a href="https://discord.gg/AvmJjVS9Hp" class="discord-btn" target="_blank">Join our Discord!</a>
+  </section>
+  <script src="script.js"></script>
 </body>
-</html>
+</html> 
